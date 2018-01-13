@@ -22,6 +22,23 @@
     .food {
         width: 100%
     }
+    
+    #about {
+        position: relative;
+    }
+    
+    #about:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("images/bgimage1.jpg");
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        z-index: -1;
+    }
 </style>
 
 <body>
@@ -49,14 +66,14 @@
     <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
         <!-- The About Section -->
-        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1200px" id="about">
-            <img src="images/logo.JPG" alt="logo" style="width:40%">
-            <p class="w3-opacity w3-padding-16"><i>Ik hou van Chef Panda!</i></p>
-            <p class="w3-justify w3-padding-16 w3-center">
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1500px" id="about">
+            <img src="images/logo.png" class="w3-padding-32" alt="logo" style="width:40%">
+            <p class="w3-opacity w3-padding-32"><i>Ik hou van Chef Panda!</i></p>
+            <p class="w3-justify w3-padding-32 w3-center">
                 Volg ons op facebook:
                 <a href="https://www.facebook.com/panda.chef.9847" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
             </p>
-            <div class="w3-row w3-padding-64">
+            <div class="w3-row w3-padding-16">
                 <div class="w3-col" style="width:20%">
                     <div class="food1">
                         <img src="images/food1.jpg" class="food w3-round w3-margin-bottom" alt="Random Name">
@@ -162,84 +179,93 @@
 
         <!-- The Menu Section -->
         <div class="w3-flat-pomegranate" id="menu">
-            <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-                <h2 class="w3-wide w3-center w3-padding-64">MENU</h2>
-                <div class="w3-content w3-center w3-padding-64">
-                    <p class="w3-padding-64">Klick hier: <a href="pages/ChefPandaMenu.pdf" target="_blank">Chef Panda Menu</a></p>
+            <div class="w3-container w3-content w3-padding-32" style="max-width:800px">
+                <h2 class="w3-wide w3-center">MENU</h2>
+                <div class="w3-content w3-center w3-padding-32">
+                    <div class="w3-padding-16">
+                        <p>Klick hier: <a href="pages/ChefPandaMenu.pdf" target="_blank">Chef Panda Menu</a></p>
+                    </div>
+                    <div>
+                        <img src="images/Menu1.jpg" alt="menujpg1" style="width:100%">
+                    </div>
+                    <div>
+                        <img src="images/Menu2.jpg" alt="menujpg2" style="width:100%">
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- The Contact Section -->
-        <div class="w3-container w3-content w3-padding-64" style="max-width:1200px" id="contact">
-            <h2 class="w3-wide w3-center">CONTACT</h2>
-            <p class="w3-opacity w3-center"><i></i></p>
-            <div class="w3-row w3-row-padding w3-padding-64">
-                <div class="w3-third w3-large w3-margin-bottom">
-                    <center>
-                        <i class="fa fa-map-marker" style="width:30px"></i> <b> Adres: </b><br>
-                        <p> Ridderkerk (Bolnes), Nederland<br> De Wetstraat 75<br> 2987 AA<br></p>
-                    </center>
-                    <center>
-                        <i class="fa fa-phone" style="width:30px"></i> <b> Telefoon: </b><br>
-                        <p>0620694151</p>
-                    </center>
-                    <center>
-                        <i class="fa fa-envelope" style="width:30px"></i> <b> Email: </b><br>
-                        <p> chefpandaridderkerk@gmail.com</p>
-                    </center>
-                </div>
-                <div class="w3-third w3-large w3-margin-bottom">
-                    <center>
-                        <i class="fa fa-clock-o" style="width:30px"></i> <b> Openingstijden: </b><br>
-                        <p>
-                            <table id="open">
-                                <tr>
-                                    <td>Maandag: </td>
-                                    <td>Gesloten</td>
-                                </tr>
-                                <tr>
-                                    <td>Dinsdag: </td>
-                                    <td>12:00 - 21:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Woensdag: </td>
-                                    <td>12:00 - 21:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Donderdag: </td>
-                                    <td>12:00 - 21:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Vrijdag: </td>
-                                    <td>12:00 - 21:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Zaterdag: </td>
-                                    <td>12:00 - 21:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Zondag: </td>
-                                    <td>12:00 - 21:00</td>
-                                </tr>
-                            </table>
-                        </p>
-                    </center>
-                </div>
-                <div class="w3-third w3-large w3-margin-bottom">
-                    <center>
-                        <i class="fa fa-map-marker" style="width:30px"></i> <b> Map: </b><br>
-                        <p>
-                            <div id="googleMap" style="height:300px;"></div>
-                            <script src='js/map.js'></script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr6s9_tbARSTz2u5G1hw91hAV-oZ9RtSM&callback=initMap" async defer></script>
-                        </p>
-                    </center>
-                </div>
+    <!-- The Contact Section -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1200px" id="contact">
+        <h2 class="w3-wide w3-center">CONTACT</h2>
+        <p class="w3-opacity w3-center"><i></i></p>
+        <div class="w3-row w3-row-padding w3-padding-64">
+            <div class="w3-third w3-large w3-margin-bottom">
+                <center>
+                    <i class="fa fa-map-marker" style="width:30px"></i> <b> Adres: </b><br>
+                    <p> Ridderkerk (Bolnes), Nederland<br> De Wetstraat 75<br> 2987 AA<br></p>
+                </center>
+                <center>
+                    <i class="fa fa-phone" style="width:30px"></i> <b> Telefoon: </b><br>
+                    <p>0620694151</p>
+                </center>
+                <center>
+                    <i class="fa fa-envelope" style="width:30px"></i> <b> Email: </b><br>
+                    <p> chefpandaridderkerk@gmail.com</p>
+                </center>
+            </div>
+            <div class="w3-third w3-large w3-margin-bottom">
+                <center>
+                    <i class="fa fa-clock-o" style="width:30px"></i> <b> Openingstijden: </b><br>
+                    <p>
+                        <table id="open">
+                            <tr>
+                                <td>Maandag: </td>
+                                <td>Gesloten</td>
+                            </tr>
+                            <tr>
+                                <td>Dinsdag: </td>
+                                <td>12:00 - 21:00</td>
+                            </tr>
+                            <tr>
+                                <td>Woensdag: </td>
+                                <td>12:00 - 21:00</td>
+                            </tr>
+                            <tr>
+                                <td>Donderdag: </td>
+                                <td>12:00 - 21:00</td>
+                            </tr>
+                            <tr>
+                                <td>Vrijdag: </td>
+                                <td>12:00 - 21:00</td>
+                            </tr>
+                            <tr>
+                                <td>Zaterdag: </td>
+                                <td>12:00 - 21:00</td>
+                            </tr>
+                            <tr>
+                                <td>Zondag: </td>
+                                <td>12:00 - 21:00</td>
+                            </tr>
+                        </table>
+                    </p>
+                </center>
+            </div>
+            <div class="w3-third w3-large w3-margin-bottom">
+                <center>
+                    <i class="fa fa-map-marker" style="width:30px"></i> <b> Map: </b><br>
+                    <p>
+                        <div id="googleMap" style="height:300px;"></div>
+                        <script src='js/map.js'></script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr6s9_tbARSTz2u5G1hw91hAV-oZ9RtSM&callback=initMap" async defer></script>
+                    </p>
+                </center>
             </div>
         </div>
+    </div>
 
-        <!-- End Page Content -->
+    <!-- End Page Content -->
     </div>
 
     <!-- Footer -->
